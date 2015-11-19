@@ -155,14 +155,14 @@
           <td>&nbsp;</td>
           <td>Gaji Pokok</td>
           <td><div align="center">:</div></td>
-          <td><?php echo $hasil['gaji_pokok']?></td>
+          <td><?php echo number_format($hasil['gaji_pokok'])?></td>
           <td>&nbsp;</td>
         </tr>
         <tr>
           <td>&nbsp;</td>
           <td>Tunjangan Jabatan</td>
           <td><div align="center">:</div></td>
-          <td><?php echo $hasil['tunj_jab']?></td>
+          <td><?php echo number_format($hasil['tunj_jab'])?></td>
           <td>&nbsp;</td>
         </tr>
       </table>

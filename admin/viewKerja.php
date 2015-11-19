@@ -26,9 +26,9 @@
   </div>
 <table width="549" border="0" class="vtable" style="margin-left:110px;">
   <tr align="center">
-    <th width="92">Kode Pekerjaan</th>
+    <th width="92">Kode</th>
     <th width="165">Divisi</th>
-    <th width="177">Nama Pekerjaan</th>
+    <th width="177">Tugas</th>
     <th width="87">Aksi</th>
   </tr>
   <?php while($row = mysql_fetch_row($hasil)){?>

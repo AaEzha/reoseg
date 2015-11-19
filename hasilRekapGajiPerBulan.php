@@ -101,11 +101,11 @@
            <td align="center"><?php echo $row[0] ?></td>
            <td align="center"><?php echo $row[1] ?></td>
            <td><?php echo $row[2] ?></td>
-           <td align="center"><?php echo $row[3] ?></td>
-           <td align="center"><?php echo $row[4] ?></td>
-           <td align="center"><?php echo $row[5] ?></td>
-           <td align="center"><?php echo $row[6] ?></td>
-           <td align="center"><?php echo $row[7] ?></td>
+           <td align="center"><?php echo number_format($row[3]) ?></td>
+           <td align="center"><?php echo number_format($row[4]) ?></td>
+           <td align="center"><?php echo number_format($row[5]) ?></td>
+           <td align="center"><?php echo number_format($row[6]) ?></td>
+           <td align="center"><?php echo number_format($row[7]) ?></td>
            <td align="center"><?php echo $row[8] ?></td>
          </tr>
          <?php } ?>

@@ -42,7 +42,7 @@
     <td align="center"><?php echo $row[2]?></td>
     <td align="center"><?php echo $row[5]?></td>
     <td align="center"><?php echo $row[11]?></td>
-    <td align="center"><?php echo "Rp. ".$row[19]?></td>
+    <td align="center"><?php echo "Rp. ".number_format($row[19])?></td>
     <td align="center"><img src="../asset/images/<?php echo $row[15]?>" alt="<?php echo $row[15]?>" width="75"/></td>
   </tr>
   <?php }?>

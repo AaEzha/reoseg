@@ -45,7 +45,7 @@
     <td align="center"><?php echo $row[5]?></td>
     <td align="center"><?php echo $row[11]?></td>
     <td align="center"><?php echo $row[12]?></td>
-    <td align="center"><?php echo "Rp. ".$row[19]?></td>
+    <td align="center"><?php echo "Rp. ".number_format($row[19]);?></td>
     <td align="center"><img src="../asset/images/<?php echo $row[15]?>" alt="<?php echo $row[15]?>" width="75"/></td>
      <td align="center"><a title="Update" href="index.php?pil=edit_pegawai&nip=<?php echo $row['0'];?>"><img src="../asset/images/edit.png"/></a> <a  title="Delete" href="viewPegawai.php?pil=delete&nip=<?php echo $row['0'];?>"><img src="../asset/images/deleted.png"/></a> </td>
   </tr>

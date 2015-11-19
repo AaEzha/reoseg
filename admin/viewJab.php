@@ -42,7 +42,7 @@
   <tr>
     <td align="center"><?php echo $row['0'];?></td>
     <td><?php echo $row['1'];?></td>
-    <td align="center"><?php echo "Rp. ".$row['2'];?></td>
+    <td align="center"><?php echo "Rp. ".number_format($row['2']);?></td>
     <td align="center"><a title="Update" href="index.php?pil=edit_jab&kode_jab=<?php echo $row['0'];?>"><img src="../asset/images/edit.png"/></a> <a title="Delete" href="viewJab.php?pil=delete&kode_jab=<?php echo $row['0'];?>"><img src="../asset/images/deleted.png"/></a> </td>
   </tr>
   <?php }?>

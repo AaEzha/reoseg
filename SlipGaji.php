@@ -152,25 +152,25 @@ WHERE tbpegawai.kode_jab=tbjabatan.kode_jab AND tbgaji.nip = tbpegawai.nip AND t
           <td>&nbsp;</td>
           <td colspan="3">Tunjangan Jabatan </td>
           <td>:</td>
-          <td colspan="3"><?php echo "Rp. ".$gaji['tunjangan']?></td>
+          <td colspan="3"><?php echo "Rp. ".number_format($gaji['tunjangan']);?></td>
           </tr>
          <tr>
           <td>&nbsp;</td>
           <td colspan="3">Tunjangan Jamsostek</td>
           <td>:</td>
-          <td colspan="3"><?php echo "Rp. ".$gaji['tunjangan']?></td>
+          <td colspan="3"><?php echo "Rp. ".number_format($gaji['tunjangan']);?></td>
           </tr>
         <tr>
           <td>&nbsp;</td>
           <td colspan="3">THR </td>
           <td>:</td>
-          <td colspan="3"><?php echo "Rp. ".$gaji['tunjangan']?></td>
+          <td colspan="3"><?php echo "Rp. ".number_format($gaji['tunjangan']);?></td>
           </tr>
         <tr>
           <td>&nbsp;</td>
           <td colspan="3">Insentive</td>
           <td>:</td>
-          <td colspan="3"><?php echo "Rp. ".$gaji['insentive']?></td>
+          <td colspan="3"><?php echo "Rp. ".number_format($gaji['insentive']);?></td>
           </tr>
           <tr>
           <td>&nbsp;</td>
@@ -181,7 +181,7 @@ WHERE tbpegawai.kode_jab=tbjabatan.kode_jab AND tbgaji.nip = tbpegawai.nip AND t
           <td>&nbsp;</td>
           <td colspan="3">Jamsostek </td>
           <td>:</td>
-          <td colspan="3"><?php echo "Rp. ".$gaji['tunjangan']?></td>
+          <td colspan="3"><?php echo "Rp. ".number_format($gaji['tunjangan']);?></td>
           </tr>
         <tr>
           <td>&nbsp;</td>

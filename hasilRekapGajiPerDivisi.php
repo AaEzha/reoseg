@@ -110,11 +110,11 @@ AND tbpekerjaan.kode_divisi = tbdivisi.kode_divisi AND tbgaji.bulan ='$bln' AND 
         <td align="center"><?php echo $v['nip']?></td>
         <td><?php echo $v['nama_pegawai']?></td>
         <td><?php echo $v['nama_jab']?></td>
-        <td><?php echo "Rp. ".$v['gaji_pokok']?></td>
-        <td><?php echo "Rp. ".$v['insentive']?></td>
-        <td><?php echo "Rp. ".$v['tunjangan']?></td>
-        <td><?php echo "Rp. ".$v['pph']?></td>
-        <td><?php echo "Rp. ".$v['gaji_bersih']?></td>
+        <td><?php echo "Rp. ".number_format($v['gaji_pokok'])?></td>
+        <td><?php echo "Rp. ".number_format($v['insentive'])?></td>
+        <td><?php echo "Rp. ".number_format($v['tunjangan'])?></td>
+        <td><?php echo "Rp. ".number_format($v['pph'])?></td>
+        <td><?php echo "Rp. ".number_format($v['gaji_bersih'])?></td>
       </tr>
       <?php }?>
   </table>
