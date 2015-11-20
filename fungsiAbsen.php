@@ -1,5 +1,23 @@
 <?php
 	include 'koneksi.php';
+
+  function jamkerja($idnya){
+    $qjk = mysql_query ("SELECT  tbjabatan.jam_kerja FROM tbpegawai,tbjabatan WHERE tbpegawai.kode_jab = tbjabatan.kode_jab AND tbpegawai.nip = '$idnya'");
+      $djk = mysql_fetch_array($qjk);
+      return $djk['jam_kerja'];
+  }
+
+  function selisihjam($jam_datang,$jam_kerja){
+    $q = mysql_query("select time('$jam_datang')-time('$jam_kerja') as selisih");
+    $d = mysql_fetch_array($q);
+    $selisih = $d['selisih'];
+    $hasil = round($selisih / 10000);
+    if($hasil>=1){
+      return $hasil;
+    }else{
+      return NULL;
+    }
+  }
 	
 	function insertDataabsen($kode_absen, $nip,$bulan,$tahun,$total_absen,$total_lembur){
        global $KoneksiDB;
