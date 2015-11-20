@@ -7,6 +7,7 @@
 	<script src="asset/js/jquery-1.4.1.min.js" type="text/javascript"></script>
 	<script src="asset/js/jquery.jcarousel.pack.js" type="text/javascript"></script>
 	<script src="asset/js/jquery-func.js" type="text/javascript"></script>
+	<script src="asset/js/num.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="page" class="shell">
@@ -123,9 +124,9 @@
 			        </tr>
 			      </table>
 		      </form>
-				<form action="absensi.php" method="post">
-					<input type="hidden" name="tgl" value="<?=date('Y-m-d');?>">
-					<input type="hidden" name="jam" value="<?=date("H");?>">
+				<form action="proses_absensi.php" method="post">
+					<input type="hidden" name="tgl" value="<?=date('Y-m-d');?>" required>
+					<input type="hidden" name="jam" value="<?=date("H:i:s");?>" required>
 					<table width="100" border="0">
 						<tr><h1 style="background-image:url(asset/css/images/login.gif);
 						height:15px;  margin-bottom:20px; 
@@ -134,10 +135,10 @@
 						<table width="100" border="0">
 						<tr>
 							<td><label for="username"></label>
-							<input name="idnya" type="text" id="username" class="inputStylelog" size="35" placeholder="ID Anda"></td>
+							<input name="idnya" type="text" id="username" class="inputStylelog" size="35" placeholder="ID Anda" onKeyPress="return isNumber(event)" maxlength="15"></td>
 						</tr>
 						<tr>
-							<td><input type="submit" name="signin" id="signin" class="btnStyle" value="<?=(date('H')>="00" and date('H')<="16")? "Datang" : "Pulang";?>">
+							<td><input type="submit" name="absen" id="signin" class="btnStyle" value="<?=(date('H')>="00" and date('H')<="16")? "Datang" : "Pulang";?>">
 						</td>
 						</tr>
 					</table>

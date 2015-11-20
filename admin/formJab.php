@@ -47,6 +47,11 @@
       <input name="tunjjab" type="number" id="tunjjab" size="40"  placeholder="Tunjangan Jabatan" required/></td>
     </tr>
     <tr>
+      <td>Jam Kerja</td>
+      <td><label for="jam_kerja"></label>
+      <input name="jam_kerja" type="text" id="jam_kerja" size="40" placeholder="misal: 08:00:00"/ pattern="\d{2}[\:]\d{2}[\:]\d{2}" maxlength="8" required></td>
+    </tr>
+    <tr>
       <td>&nbsp;</td>
       <td><input type="submit" name="submit" id="submit" value="Simpan" class="btnStyle" />
       <input type="reset" name="batal" id="batal" value="Batal" class="btnStyle"/></td>
@@ -59,7 +64,7 @@
 <?php
 	if(isset($_POST['submit'])){
 		if($_POST['submit']){
-            if(insertDataJabatan($_POST['kodejab'],$_POST['namajab'],$_POST['tunjjab'])){
+            if(insertDataJabatan($_POST['kodejab'],$_POST['namajab'],$_POST['tunjjab'],$_POST['jam_kerja'])){
 				echo '<script language="javascript">alert("Data Berhasil di Simpan");location.replace("index.php?pil=view_jab"); </script>';
 				//header ('location:index.php?pil=view_jab');
 			}else{

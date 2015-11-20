@@ -1,9 +1,9 @@
 <?php
 	include ('koneksi.php');
 	
-	function insertDataJabatan($kode_jab, $nama_jab,$tunj_jab){
+	function insertDataJabatan($kode_jab, $nama_jab,$tunj_jab,$jam_kerja){
        global $KoneksiDB;
-       $sql="INSERT into tbjabatan (kode_jab, nama_jab,tunj_jab)VALUES ('$kode_jab', '$nama_jab','$tunj_jab')";
+       $sql="INSERT into tbjabatan (kode_jab, nama_jab,tunj_jab,jam_kerja)VALUES ('$kode_jab', '$nama_jab','$tunj_jab','$jam_kerja')";
        $hasil=mysql_query($sql);
        return ($hasil);
       }
@@ -21,7 +21,8 @@
                while($rows=mysql_fetch_assoc($hasil)){
                    $data=array("kode_jab"  =>$rows["kode_jab"],
                                "nama_jab"=>$rows["nama_jab"],
-                               "tunj_jab"=>$rows["tunj_jab"]);
+                               "tunj_jab"=>$rows["tunj_jab"],
+                               "jam_kerja"=>$rows["jam_kerja"]);
                }
            }else{
              $error=2; //jika data tidak ditemukan
@@ -33,9 +34,9 @@
               return ($hasil);
          }  
 	// edit data jabatan
-	function updateDataJabatan($kode_jab, $nama_jab,$tunj_jab){
+	function updateDataJabatan($kode_jab, $nama_jab,$tunj_jab,$jam_kerja){
        global $KoneksiDB;
-       $sql="UPDATE tbjabatan SET nama_jab='$nama_jab',tunj_jab='$tunj_jab' WHERE kode_jab='$kode_jab' ";
+       $sql="UPDATE tbjabatan SET nama_jab='$nama_jab',tunj_jab='$tunj_jab',jam_kerja='$jam_kerja' WHERE kode_jab='$kode_jab' ";
        $hasil=mysql_query($sql);
        return ($hasil);
     }

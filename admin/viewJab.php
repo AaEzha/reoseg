@@ -31,11 +31,12 @@
       <div class="form-subHeader">List Seluruh Jabatan</div>
       
   </div>
-<table width="620" border="0" class="vtable" style="margin-left:78px;">
+<table width="90%" border="0" class="vtable">
   <tr align="center">
     <th width="98">Kode Jabatan</th>
     <th width="246">Nama Jabatan</th>
     <th width="103">Tunjangan Jabatan</th>
+    <th width="103">Jam Kerja</th>
     <th width="124">Opsi</th>
   </tr>
   <?php while ($row=mysql_fetch_row($hasil)){?>
@@ -43,7 +44,8 @@
     <td align="center"><?php echo $row['0'];?></td>
     <td><?php echo $row['1'];?></td>
     <td align="center"><?php echo "Rp. ".number_format($row['2']);?></td>
-    <td align="center"><a title="Update" href="index.php?pil=edit_jab&kode_jab=<?php echo $row['0'];?>"><img src="../asset/images/edit.png"/></a> <a title="Delete" href="viewJab.php?pil=delete&kode_jab=<?php echo $row['0'];?>"><img src="../asset/images/deleted.png"/></a> </td>
+    <td align="center"><?php echo $row['3'];?></td>
+    <td align="center"><a title="Update" href="index.php?pil=edit_jab&kode_jab=<?php echo $row['0'];?>"><img src="../asset/images/edit.png"/></a> <a title="Delete" href="viewJab.php?pil=delete&kode_jab=<?php echo $row['0'];?>" onClick="return confirm('Anda yakin akan menghapus data ini?')"><img src="../asset/images/deleted.png"/></a> </td>
   </tr>
   <?php }?>
 </table>

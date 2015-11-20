@@ -28,12 +28,17 @@
     <tr>
       <td>Nama Jabatan</td>
       <td><label for="namajab"></label>
-      <input name="namajab" type="text" id="namajab" size="40"  value="<?php echo $hasil['data']['nama_jab']?>" placeholder="Nama Jabatan"/></td>
+      <input name="namajab" type="text" id="namajab" size="40"  value="<?php echo $hasil['data']['nama_jab']?>" placeholder="Nama Jabatan"/ required></td>
     </tr>
     <tr>
       <td>Tunjangan Jabatan</td>
       <td><label for="tunjjab"></label>
-      <input name="tunjjab" type="number" id="tunjjab" size="40"  value="<?php echo $hasil['data']['tunj_jab']?>" placeholder="Tunjangan Jabatan"/></td>
+      <input name="tunjjab" type="number" id="tunjjab" size="40"  value="<?php echo $hasil['data']['tunj_jab']?>" placeholder="Tunjangan Jabatan"/ required></td>
+    </tr>
+    <tr>
+      <td>Jam Kerja</td>
+      <td><label for="jam_kerja"></label>
+      <input name="jam_kerja" type="text" id="jam_kerja" size="40"  value="<?php echo $hasil['data']['jam_kerja']?>" placeholder="misal: 08:00:00"/ pattern="\d{2}[\:]\d{2}[\:]\d{2}" maxlength="8" required></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
@@ -48,7 +53,7 @@
 <?php
 	if(isset($_POST['submit'])){
 		if($_POST['submit']){
-            if(updateDataJabatan($_POST['kodejab'],$_POST['namajab'],$_POST['tunjjab'])){
+            if(updateDataJabatan($_POST['kodejab'],$_POST['namajab'],$_POST['tunjjab'],$_POST['jam_kerja'])){
 				echo '<script language="javascript">alert("Data Berhasil di Update");location.replace("index.php?pil=view_jab"); </script>';
 				//header ('location:index.php?pil=view_jab');
 			}else{
