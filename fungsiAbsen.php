@@ -7,6 +7,12 @@
       return $djk['jam_kerja'];
   }
 
+  function namapeg($nip){
+    $q = mysql_query("select nama_pegawai from tbpegawai where nip='$nip'");
+    $d = mysql_fetch_array($q);
+    return $d['nama_pegawai'];
+  }
+
   function selisihjam($jam_datang,$jam_kerja){
     $q = mysql_query("select time('$jam_datang')-time('$jam_kerja') as selisih");
     $d = mysql_fetch_array($q);
